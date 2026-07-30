@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium 3D metal signs crafted for lasting impact. Custom dimensional lettering and business signs in stainless steel, aluminum, brass, and more. Elevate your brand with professional metal signage.">
+  <meta name="keywords" content="3D metal signs, dimensional metal letters, business signs, custom metal signage, stainless steel signs, aluminum letters, commercial signage">
+  <meta name="author" content="Premium Signage Solutions">
+  <meta name="robots" content="index, follow">
+  <title>3D Metal Signs | Custom Dimensional Lettering & Business Signs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #f8f9fb;
+      --color-surface: #ffffff;
+      --color-text: #1a1d23;
+      --color-text-muted: #5c6570;
+      --color-accent: #2c5aa0;
+      --color-accent-hover: #1e3f73;
+      --color-metal: #8a919c;
+      --color-border: #e2e6eb;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --max-width: 1120px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--color-accent-hover);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      color: var(--color-accent);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      background: linear-gradient(160deg, #f0f3f8 0%, #e8edf5 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.1rem, 4.5vw, 2.85rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: var(--color-text);
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--color-accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #ddd;
+    }
+
+    .hero-image img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.15rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-header p {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .feature-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.85rem;
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: #e8f0fa;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.15rem;
+      font-size: 1.25rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Materials */
+    .materials {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .material-item {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-radius: var(--radius);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+    }
+
+    .material-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .material-item p {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Applications */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .app-block {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .app-block h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .app-block ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .app-block li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.55rem;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .app-block li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      counter-reset: step;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 auto 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .cta p {
+      opacity: 0.9;
+      max-width: 520px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    .cta .btn {
+      background: #fff;
+      color: var(--color-accent);
+    }
+
+    .cta .btn:hover {
+      background: #f0f4fa;
+      color: var(--color-accent-hover);
+    }
+
+    /* Footer */
+    footer {
+      background: #12151a;
+      color: #a0a8b4;
+      padding: 3rem 0 1.75rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand span {
+      color: #6b9fd4;
+    }
+
+    footer h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 0.45rem;
+    }
+
+    footer a {
+      color: #a0a8b4;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2a3038;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .materials-grid,
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .features-grid,
+      .materials-grid,
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 3rem 0 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">Apex<span>Metal</span> Signs</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#features">Benefits</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-heading">Premium 3D Metal Signs That Command Attention</h1>
+          <p>Transform your brand presence with custom dimensional metal lettering. Precision-crafted 3D metal signs deliver unmatched durability, depth, and sophistication for storefronts, lobbies, and commercial spaces.</p>
+          <a href="#contact" class="btn">Request a Free Quote</a>
+        </div>
+        <figure class="hero-image">
+          <img 
+            src="https://neonsnest.com.au/wp-content/uploads/2026/07/bell-field-600x400.webp" 
+            alt="Professional 3D metal sign with dimensional lettering mounted on a modern commercial wall"
+            width="900"
+            height="675"
+            loading="eager">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="features-heading">Why Choose <a href="https://neonsnest.com.au/3d-metal-signs/">3D Metal Signs</a>?</h2>
+          <p>Dimensional metal lettering offers a level of presence and longevity that flat graphics simply cannot match.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">◆</div>
+            <h3>Architectural Depth</h3>
+            <p>Raised letterforms create natural shadows and visual dimension, making your message readable from multiple angles and distances.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">◉</div>
+            <h3>Weather-Resistant Durability</h3>
+            <p>Premium metals withstand UV exposure, rain, snow, and temperature extremes—ideal for long-term exterior installations.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">✦</div>
+            <h3>Timeless Professional Appeal</h3>
+            <p>Brushed, polished, or powder-coated finishes convey quality and permanence that elevate any commercial environment.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">◎</div>
+            <h3>Custom Fabrication</h3>
+            <p>Every letter and logo is cut, formed, and finished to your exact specifications, fonts, and brand guidelines.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">▣</div>
+            <h3>Low Maintenance</h3>
+            <p>Unlike painted or vinyl surfaces, quality metal signs retain their appearance for years with minimal upkeep.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">◈</div>
+            <h3>Versatile Mounting</h3>
+            <p>Flush-mount, standoff, or floating installations create the precise visual effect your project demands.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section id="materials" class="materials" aria-labelledby="materials-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="materials-heading">Premium Materials for Every Project</h2>
+          <p><a href="https://neonsnest.com.au/">Neons Nest</a> select from industry-leading metals engineered for both indoor elegance and outdoor performance.</p>
+        </div>
+        <div class="materials-grid">
+          <div class="material-item">
+            <h3>Stainless Steel</h3>
+            <p>Corrosion-resistant with brushed or mirror finishes. Ideal for high-traffic and exterior use.</p>
+          </div>
+          <div class="material-item">
+            <h3>Aluminum</h3>
+            <p>Lightweight, strong, and fully customizable with powder-coat colors or natural finishes.</p>
+          </div>
+          <div class="material-item">
+            <h3>Brass & Bronze</h3>
+            <p>Warm, classic metals that develop rich patinas or can be polished for a refined look.</p>
+          </div>
+          <div class="material-item">
+            <h3>Copper</h3>
+            <p>Distinctive character that ages gracefully. Perfect for distinctive architectural statements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section id="applications" aria-labelledby="applications-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="applications-heading">Ideal Applications for 3D Metal Signs</h2>
+          <p>From storefront branding to interior wayfinding, dimensional metal lettering enhances every environment.</p>
+        </div>
+        <div class="apps-grid">
+          <div class="app-block">
+            <h3>Business Signs & Commercial Branding</h3>
+            <p>Make a lasting first impression with <a href="https://neonsnest.com.au/business-signs/">custom business signs</a> that communicate professionalism and permanence. Dimensional metal lettering is the preferred choice for companies that want their identity to stand out with clarity and substance.</p>
+            <ul>
+              <li>Storefront and building façade identification</li>
+              <li>Reception and lobby logo walls</li>
+              <li>Corporate campus and office complex markers</li>
+              <li>Retail and hospitality entrance branding</li>
+            </ul>
+          </div>
+          <div class="app-block">
+            <h3>Architectural & Institutional</h3>
+            <p>Universities, civic buildings, medical facilities, and cultural institutions rely on metal dimensional letters for wayfinding and identity systems that endure for decades.</p>
+            <ul>
+              <li>Building name and address markers</li>
+              <li>Department and suite identification</li>
+              <li>Monument and freestanding signage</li>
+              <li>Interior directional and directory systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="process-heading">Our Straightforward Process</h2>
+          <p>From concept to installation, we keep every step clear and collaborative.</p>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Consultation</h3>
+            <p>Share your vision, brand assets, and site details. We advise on materials, scale, and mounting.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Design & Proof</h3>
+            <p>Receive detailed drawings and 3D visualizations for approval before any fabrication begins.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Precision Fabrication</h3>
+            <p>Letters are laser-cut or CNC-formed, welded, finished, and quality-checked in our workshop.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Delivery & Install</h3>
+            <p>Your completed 3D metal signs arrive ready for professional installation or DIY mounting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Elevate Your Brand?</h2>
+        <p>Get a no-obligation quote for custom 3D metal signs tailored to your exact requirements. Our team responds within one business day.</p>
+        <a href="mailto:hello@apexmetalsigns.com" class="btn">Start Your Project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Apex<span>Metal</span> Signs</div>
+          <p>Specialists in custom 3D metal signs and dimensional lettering for commercial and architectural applications.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#features">Benefits</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#process">Our Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@apexmetalsigns.com">hello@apexmetalsigns.com</a></li>
+            <li>Mon–Fri, 9am–5pm EST</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apex Metal Signs. All rights reserved. Custom 3D metal signs and professional business signs fabricated with precision.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
